@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah & Michael | Wedding</title>
+    <title>Anna & Daved | Wedding</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -11,7 +11,7 @@
         body {
             font-family: 'Inter', sans-serif;
             /* Updated path to sunset.png for GitHub repo */
-            background-image: url('sunset.png');
+            background-image: url('https://raw.githubusercontent.com/boobalootoo/wedsite/refs/heads/main/sunset.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -37,7 +37,7 @@
     <!-- Header Section -->
     <header class="relative overflow-hidden pt-12 pb-8 md:pt-24 md:pb-16 text-center">
         <div class="container mx-auto px-6">
-            <h1 class="text-3xl md:text-6xl font-extrabold tracking-tight">Sarah & Michael</h1>
+            <h1 class="text-3xl md:text-6xl font-extrabold tracking-tight">Anna & Daved</h1>
             <p class="mt-4 text-xl md:text-2xl font-semibold text-gray-800">We're getting married!</p>
             <p class="mt-2 text-md md:text-xl text-gray-700">October 26, 2024</p>
         </div>
@@ -52,7 +52,7 @@
                     <h3 class="text-2xl font-bold text-rose-500 mb-4">Ceremony</h3>
                     <p class="text-lg font-medium">4:00 PM</p>
                     <p class="text-md mt-2">St Luke's Church, Prestonville</p>
-                    <a href="#location-ceremony" class="text-sm text-gray-600 underline hover:text-rose-500 transition duration-300">
+                    <a href="#location" class="text-sm text-gray-600 underline hover:text-rose-500 transition duration-300">
                         123 Church Lane, Brighton
                     </a>
                 </div>
@@ -60,7 +60,7 @@
                     <h3 class="text-2xl font-bold text-rose-500 mb-4">Reception</h3>
                     <p class="text-lg font-medium">6:00 PM</p>
                     <p class="text-md mt-2">Pangdean Barn</p>
-                    <a href="#location-reception" class="text-sm text-gray-600 underline hover:text-rose-500 transition duration-300">
+                    <a href="#location" class="text-sm text-gray-600 underline hover:text-rose-500 transition duration-300">
                         Pangdean Farm, Brighton
                     </a>
                 </div>
@@ -84,35 +84,20 @@
     <section id="location" class="py-16 md:py-24 content-section">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-extrabold mb-8">Venue Location</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div id="location-ceremony" class="rounded-xl shadow-lg overflow-hidden">
-                    <h3 class="text-xl font-bold p-4 bg-gray-100">Ceremony: St Luke's Church</h3>
-                    <!--
-                        To add your own map, go to Google Maps, search for your venue,
-                        click 'Share', then 'Embed a map', and copy the iframe code.
-                        Replace the 'src' value below with the one you copied.
-                    -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.404221087401!2d-0.12933908420311218!3d50.83547287953245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875850974868037%3A0xc3d29a593259e519!2sSt%20Luke's%20Church!5e0!3m2!1sen!2suk!4v1628174402636!5m2!1sen!2suk"
-                        width="100%"
-                        height="400"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div id="location-reception" class="rounded-xl shadow-lg overflow-hidden">
-                    <h3 class="text-xl font-bold p-4 bg-gray-100">Reception: Pangdean Barn</h3>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.8631165345753!2d-0.14725518420286827!3d50.84501537953331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875855239a50275%3A0x6b447605d39d9361!2sPangdean%20Barn!5e0!3m2!1sen!2suk!4v1628174402636!5m2!1sen!2suk"
-                        width="100%"
-                        height="400"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
-                    </iframe>
-                </div>
+            <div class="max-w-3xl mx-auto rounded-xl shadow-lg overflow-hidden">
+                <h3 class="text-xl font-bold p-4 bg-gray-100">Ceremony & Reception</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2520.1332026131494!2d-0.1417937842029759!3d50.84025177953289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4875850974868037%3A0xc3d29a593259e519!2sSt%20Luke's%20Church%2C%20Prestonville!3m2!1d50.8354729!2d-0.12715049999999998!4m5!1s0x4875855239a50275%3A0x6b447605d39d9361!2sPangdean%20Barn%2C%20Brighton%2C%20UK!3m2!1d50.8450154!2d-0.14506689999999998!5e0!3m2!1sen!2suk!4v1672348574100!5m2!1sen!2suk"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
             </div>
+            <p class="mt-4 text-sm text-gray-600">
+                Click on the venue addresses above for directions to the location.
+            </p>
         </div>
     </section>
 
@@ -184,7 +169,7 @@
     <!-- Footer Section -->
     <footer class="bg-gray-800 text-gray-300 text-center py-8">
         <div class="container mx-auto px-6">
-            <p>&copy; 2024 Sarah & Michael. All Rights Reserved.</p>
+            <p>&copy; 2024 Anna & Daved. All Rights Reserved.</p>
             <div class="mt-4 flex justify-center space-x-6">
                 <!-- Social media icons (placeholder) -->
                 <a href="#" class="hover:text-white transition duration-300">
