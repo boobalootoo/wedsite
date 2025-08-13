@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna & Daved | Wedding</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://raw.githubusercontent.com/boobalootoo/wedsite/refs/heads/main/sunset.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white overlay */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Confirmation Modal -->
+    <div id="modal-backdrop" class="fixed inset-0 bg-gray-900 bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-sm w-full transform transition-all duration-300 scale-95" id="confirmation-modal">
+            <h3 class="text-xl font-bold mb-4">Thank You!</h3>
+            <p id="modal-message" class="text-gray-700 mb-6"></p>
+            <button onclick="closeModal()" class="w-full bg-rose-500 text-white font-semibold py-2 px-4 rounded-full hover:bg-rose-600 transition duration-300">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="relative overflow-hidden pt-12 pb-8 md:pt-24 md:pb-16 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-6xl font-extrabold tracking-tight">Anna & Daved</h1>
+            <p class="mt-4 text-xl md:text-2xl font-semibold text-gray-800">We're getting married!</p>
+            <p class="mt-2 text-md md:text-xl text-gray-700">May 2, 2026</p>
+            <!-- Days-to-Wedding Counter -->
+            <div id="countdown" class="mt-4 text-lg md:text-xl font-bold text-rose-600"></div>
+        </div>
+    </header>
+
+    <!-- Wedding Details Section -->
+    <section id="details" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">The Celebration</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                <div class="p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl bg-white/70 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-rose-500 mb-4">Ceremony</h3>
+                    <p class="text-lg font-medium">4:00 PM</p>
+                    <p class="text-md mt-2">St Luke's Church, Prestonville</p>
+                    <a href="#location" class="text-sm text-gray-600 underline hover:text-rose-500 transition duration-300">
+                        123 Church Lane, Brighton
+                    </a>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl bg-white/70 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-rose-500 mb-4">Reception</h3>
+                    <p class="text-lg font-medium">6:00 PM</p>
+                    <p class="text-md mt-2">Pangdean Barn</p>
+                    <a href="#location" class="text-sm text-gray-600 underline hover:text-rose-500 transition duration-300">
+                        Pangdean Farm, Brighton
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center mb-8">Our Story</h2>
+            <div class="max-w-2xl mx-auto text-center space-y-6">
+                <p class="text-lg">
+                    [Placeholder for your story. Share how you met, your journey together, and what you love most about each other. This is a chance to tell your guests your unique story.]
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dress Code Section -->
+    <section id="dress-code" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Dress Code</h2>
+            <div class="max-w-2xl mx-auto space-y-6">
+                <p class="text-lg">
+                    We kindly ask guests to wear semi-formal attire. Feel free to explore our suggested color palette below for inspiration.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-6">
+                    <!-- Suggested Color Palette -->
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-emerald-700"></div>
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-teal-400"></div>
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-slate-300"></div>
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-rose-200"></div>
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-gray-500"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Location Section -->
+    <section id="location" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Venue Location</h2>
+            <div class="max-w-3xl mx-auto rounded-xl shadow-lg overflow-hidden">
+                <h3 class="text-xl font-bold p-4 bg-gray-100">Ceremony & Reception</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2520.1332026131494!2d-0.1417937842029759!3d50.84025177953289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4875850974868037%3A0xc3d29a593259e519!2sSt%20Luke's%20Church%2C%20Prestonville!3m2!1d50.8354729!2d-0.12715049999999998!4m5!1s0x4875855239a50275%3A0x6b447605d39d9361!2sPangdean%20Barn%2C%20Brighton%2C%20UK!3m2!1d50.8450154!2d-0.14506689999999998!5e0!3m2!1sen!2suk!4v1672348574100!5m2!1sen!2suk"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">
+                Click on the venue addresses above for directions to the location.
+            </p>
+        </div>
+    </section>
+
+    <!-- Getting There Section -->
+    <section id="getting-there" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Getting There</h2>
+            <div class="max-w-2xl mx-auto text-center space-y-6">
+                <p class="text-lg">
+                    [Placeholder for travel information. Provide details on parking, public transportation, and local taxi services to help your guests plan their journey.]
+                </p>
+                <p class="text-lg">
+                    We will have shuttle services available from St Luke's Church to Pangdean Barn after the ceremony.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center mb-8">RSVP</h2>
+            <div class="max-w-lg mx-auto p-8 rounded-xl shadow-lg bg-white/70 backdrop-blur-sm">
+                <form id="rsvp-form" onsubmit="handleRsvp(event)">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Your Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-rose-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="attendance" class="block text-gray-700 font-bold mb-2">Will you be attending?</label>
+                        <select id="attendance" name="attendance" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-rose-500" required>
+                            <option value="">Please select...</option>
+                            <option value="attending">Yes, gladly!</option>
+                            <option value="not-attending">No, with regrets.</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="food" class="block text-gray-700 font-bold mb-2">Food Selection</label>
+                        <select id="food" name="food" class="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-rose-500">
+                            <option value="">Please select a meal...</option>
+                            <option value="chicken">Roasted Chicken</option>
+                            <option value="fish">Pan-seared Salmon</option>
+                            <option value="vegetarian">Vegetarian Lasagna</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-rose-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-600 transition duration-300">
+                            Submit RSVP
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Sharing Section -->
+    <section id="photos" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Share Your Photos</h2>
+            <p class="text-lg mb-6">
+                We'd love to see the day through your eyes! Please use the buttons below to take and upload photos to our shared album.
+            </p>
+            <!-- Button container for the two buttons -->
+            <div class="flex justify-center space-x-4">
+                <a href="https://photos.app.goo.gl/uJJenCodg3JuFVeW9" class="inline-block bg-rose-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-600 transition duration-300">
+                    Take Photos
+                </a>
+                <a href="https://photos.app.goo.gl/uJJenCodg3JuFVeW9" class="inline-block bg-rose-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-600 transition duration-300">
+                    Upload Photos
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">
+                All photos will be added to the shared Google Photos album.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 text-center py-8">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Anna & Daved. All Rights Reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <!-- Social media icons (placeholder) -->
+                <a href="#" class="hover:text-white transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 9h4v12H4zM6 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                </a>
+                <a href="#" class="hover:text-white transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 1h9C18.66 1 20 2.34 20 4.5v9C20 15.66 18.66 17 16.5 17h-9C5.34 17 4 15.66 4 13.5v-9C4 2.34 5.34 1 7.5 1zm-.5 10a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm11 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to handle the RSVP form submission
+        function handleRsvp(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const attendance = document.getElementById('attendance').value;
+            const food = document.getElementById('food').value;
+            
+            // Generate a message based on attendance and food choice
+            let message = '';
+            if (attendance === 'attending') {
+                message = `Thank you, ${name}! We can't wait to celebrate with you.`;
+                if (food) {
+                    message += ` Your meal choice of ${food} has been noted.`;
+                }
+            } else if (attendance === 'not-attending') {
+                message = `Thank you, ${name}. We'll miss you, but appreciate you letting us know.`;
+            } else {
+                message = `Thank you, ${name}! Your RSVP has been submitted.`;
+            }
+
+            // Display the modal with the confirmation message
+            document.getElementById('modal-message').innerText = message;
+            document.getElementById('modal-backdrop').classList.remove('hidden');
+
+            // Reset the form after submission
+            document.getElementById('rsvp-form').reset();
+        }
+
+        // Countdown timer logic
+        function updateCountdown() {
+            const weddingDate = new Date("May 2, 2026 16:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            
+            const countdownElement = document.getElementById('countdown');
+            if (distance < 0) {
+                countdownElement.innerHTML = "We're married!";
+            } else {
+                countdownElement.innerHTML = `${days} Days to Go!`;
+            }
+        }
+
+        // Initial call to set the countdown and then update every day
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60 * 60 * 24);
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('modal-backdrop').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
