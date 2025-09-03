@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna & Daved | Wedding</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://raw.githubusercontent.com/boobalootoo/wedsite/refs/heads/main/sunset.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white overlay */
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header Section -->
+    <header class="relative overflow-hidden pt-12 pb-8 md:pt-24 md:pb-16 text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl md:text-6xl font-extrabold tracking-tight">Anna & Daved</h1>
+            <p class="mt-4 text-xl md:text-2xl font-semibold text-gray-800">We're getting married!</p>
+            <p class="mt-2 text-md md:text-xl text-gray-700">May 2, 2026</p>
+            <!-- Days-to-Wedding Counter -->
+            <div id="countdown" class="mt-4 text-lg md:text-xl font-bold text-[#FF3E4E]"></div>
+        </div>
+    </header>
+
+    <!-- Wedding Details Section -->
+    <section id="details" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">The Celebration</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                <div class="p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl bg-white/70 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-[#FF3E4E] mb-4">Ceremony</h3>
+                    <p class="text-lg font-medium">11:30 </p>
+                    <p class="text-md mt-2">64 Old Shoreham Rd, Brighton and Hove, Brighton BN1 5DD</p>
+                </div>
+                <div class="p-8 rounded-xl shadow-lg transition duration-300 hover:shadow-xl bg-white/70 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-[#FF3E4E] mb-4">Reception</h3>
+                    <p class="text-lg font-medium">14:00 </p>
+                    <p class="text-md mt-2">Pangdean Farm, Pyecombe, Brighton BN45 7FN</p>
+                    <a href="https://www.pangdean.com/" target="_blank" class="text-sm text-gray-600 underline hover:text-[#FF3E4E] transition duration-300">
+                        Visit Pangdean Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center mb-8">Important info</h2>
+            <div class="max-w-2xl mx-auto text-center space-y-6">
+                <p class="text-lg">
+                    Ceremony at St Luke’s church prestonville, please be aware there are two St Luke’s in Brighton. Please arrive by 11.30am
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dress Code Section -->
+    <section id="dress-code" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Dress Code</h2>
+            <div class="max-w-2xl mx-auto space-y-6">
+                <p class="text-lg">
+                    We kindly ask guests to wear formal attire. Feel free to explore our suggested color palette below for inspiration.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mt-6">
+                    <!-- Suggested Color Palette -->
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-[#FF3E4E]"></div>
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-[#FF972F]"></div>
+                    <div class="w-16 h-16 rounded-full shadow-lg bg-[#FFF166]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Location Section -->
+    <section id="location" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Venue Location</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+                <!-- Ceremony Map -->
+                <div class="max-w-3xl mx-auto rounded-xl shadow-lg overflow-hidden">
+                    <h3 class="text-xl font-bold p-4 bg-gray-100">Ceremony - St Luke's Church</h3>
+                    <iframe
+                        src="https://maps.google.com/maps?q=64%20Old%20Shoreham%20Rd,%20Brighton%20and%20Hove,%20Brighton%20BN1%205DD&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <!-- Reception Map -->
+                <div class="max-w-3xl mx-auto rounded-xl shadow-lg overflow-hidden">
+                    <h3 class="text-xl font-bold p-4 bg-gray-100">Reception - Pangdean Farm</h3>
+                    <iframe
+                        src="https://maps.google.com/maps?q=Pangdean%20Farm,%20Pyecombe,%20Brighton%20BN45%207FN&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">
+                Click view larger map for directions to the location.
+            </p>
+        </div>
+    </section>
+
+    <!-- Getting There Section -->
+    <section id="getting-there" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Getting There</h2>
+            <div class="max-w-2xl mx-auto text-center space-y-6">
+                <p class="text-lg">
+                    Parking on the roads surrounding the church is permitted however it is paid parking with a maximum of 4 hours.
+
+There is parking available at Pangdean barn for the duration of the wedding day.
+                </p>
+                <p class="text-lg">
+                    We will have shuttle services available from St Luke's Church to Pangdean Barn after the ceremony.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center mb-8">RSVP</h2>
+            <div class="max-w-lg mx-auto p-8 rounded-xl shadow-lg bg-white/70 backdrop-blur-sm">
+                <!--
+                    Google Form Embedded Here
+                -->
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeA5fLxvVnm1BaXD_DT_Lvw64Cqpun8Avlt9d8Cy7MF-Azfmw/viewform?embedded=true" 
+                    width="100%" 
+                    height="900" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    title="Anna & Daved RSVP Form">Loading…</iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Sharing Section -->
+    <section id="photos" class="py-16 md:py-24 content-section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold mb-8">Share Your Photos</h2>
+            <p class="text-lg mb-6">
+                We'd love to see the day through your eyes! Please use the button below to upload photos to our shared album.
+            </p>
+            <!-- Button container for the two buttons -->
+            <div class="flex justify-center space-x-4">
+                <a href="https://photos.app.goo.gl/uJJenCodg3JuFVeW9" class="inline-block bg-[#FF3E4E] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#FF972F] transition duration-300">
+                    Upload Photos
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">
+                All photos will be added to the shared Google Photos album.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 text-center py-8">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Anna & Daved. All Rights Reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <!-- Social media icons (placeholder) -->
+                <a href="#" class="hover:text-white transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 9h4v12H4zM6 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+                </a>
+                <a href="#" class="hover:text-white transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 1h9C18.66 1 20 2.34 20 4.5v9C20 15.66 18.66 17 16.5 17h-9C5.34 17 4 15.66 4 13.5v-9C4 2.34 5.34 1 7.5 1zm-.5 10a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm11 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timer logic
+        function updateCountdown() {
+            const weddingDate = new Date("May 2, 2026 16:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            
+            const countdownElement = document.getElementById('countdown');
+            if (distance < 0) {
+                countdownElement.innerHTML = "We're married!";
+            } else {
+                countdownElement.innerHTML = `${days} Days to Go!`;
+            }
+        }
+
+        // Initial call to set the countdown and then update every day
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60 * 60 * 24);
+    </script>
+</body>
+</html>
